@@ -8,7 +8,7 @@ import { Observable, of } from 'rxjs';
 })
 export class StudentService {
 
-  private heroesUrl = 'http://localhost:8082/api/pepsi';  // URL to web api
+  private theUrl = 'http://localhost:8082/api/pepsi';  // URL to web api
 
   getStudent() : Student{
     let studentTemp : Student = new Student();
@@ -17,6 +17,6 @@ export class StudentService {
   }
   constructor( private http: HttpClient) { }
   getAllStudents(): Observable<Student[]> {
-    return this.http.get<Student[]>(this.heroesUrl)
+    return this.http.get<Student[]>(this.theUrl)
   }
 }
